@@ -1,0 +1,107 @@
+\documentclass[11pt, manuscript, screen, nonacm=true, natbib=true]{acmart-backref}
+\setlength{\footskip}{12.3pt}
+\usepackage{pdfpages}
+\usepackage{wrapfig}
+\usepackage[
+   ngerman
+]{babel}
+\usepackage{listings}
+
+\usepackage{inconsolata}
+\setmonofont[]{inconsolata}
+
+\usepackage{listings, listings-rust}
+\lstset{
+      basicstyle=\ttfamily%
+   , emphstyle={\color{NavyBlue}},
+   , identifierstyle=\color{NavyBlue},
+   , commentstyle={\color{gray}\ttfamily},
+   , stringstyle={\color{BurntOrange}\ttfamily},
+   , ndkeywordstyle={\color{purple}\bfseries},
+   , keywordstyle={\color{purple}\bfseries},
+   , columns=spaceflexible%
+   , keepspaces=true%
+   , showspaces=false%
+   , showtabs=false%
+   , showstringspaces=false%
+   , numbers=left%      
+   , firstnumber=auto%
+   , numberblanklines=true%
+   , frame=trbL%
+   , numberstyle=\tiny%
+   , frame=leftline%
+   , numbersep=7pt%
+   , framesep=5pt%
+   , framerule=10pt%
+   , xleftmargin=15pt%
+   , backgroundcolor=\color[gray]{0.97}%
+   , rulecolor=\color[gray]{0.90}%
+}
+
+
+\AtBeginDocument{%
+  \providecommand\BibTeX{{%
+    \normalfont B\kern-0.5em{\scshape i\kern-0.25em b}\kern-0.8em\TeX}}}
+
+
+\newcommand\Address[1]{\tabular{c}#1\endtabular\hfill}    
+
+\lstset{basicstyle=\footnotesize\ttfamily,
+        breaklines=true,
+        showtabs=false,
+        showspaces=false,
+        showstringspaces=false}
+\lstset{framextopmargin=50pt}
+
+
+\begin{document}
+
+\title{Titel}
+\subtitle{Untertitel}
+
+\author{Nina Hammer}
+\affiliation{%
+  \institution{5323494, Technische Hochschule Mittelhessen}
+  \country{Dozent: }
+}
+\email{nina.hammer@mni.thm.de}
+
+\renewcommand{\shortauthors}{N. Hammer}
+
+\maketitle
+
+\vfill
+Bild hier
+%\includegraphics[height=3cm]{./assets/Solr_Logo.png}
+\vfill
+
+\pagebreak
+
+\tableofcontents
+
+\pagebreak
+
+
+
+\section{Überschrift}
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+\subsection{Unterüberschrift}
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
+
+Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet,
+
+\subsection{Unterüberschrift}
+
+\subsubsection{Unterunterüberschrift}
+
+\begin{lstlisting}[language=Rust]
+  pub fn main() -> Result<String>{
+      println!("Hello World! {}", true);
+  }
+  \end{lstlisting}
+
+\bibliographystyle{IEEEtranN}
+\bibliography{./bib/zotero.bib}
+
+\end{document}
+\endinput
